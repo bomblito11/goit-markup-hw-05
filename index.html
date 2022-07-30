@@ -31,7 +31,7 @@
               </h2>
               <div>
                 <ul class="menu-links">
-                  <li><a href="agencja.html">Agencja</a></li>
+                  <li><a href="agencja.html" class="active">Agencja</a></li>
                   <li><a href="portfolio.html">Portfolio</a></li>
                   <li><a href="kontakt">Kontakt</a></li>
                 </ul>
@@ -68,7 +68,16 @@
       <div class="main-header">
         <div class="container">
           <h1>Efektywne rozwiązania dla waszego biznesu</h1>
-          <button type="button" class="header-button">Zamów usługe</button>
+          <button type="button" class="header-button" data-modal-open>
+            Zamów usługe
+          </button>
+          <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+              <button type="button" class="close-btn" data-modal-close>
+                x
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </header>
@@ -134,28 +143,37 @@
           <h2 class="section-title">Czym się zajmujemy</h2>
           <ul class="activity-images">
             <li>
-              <img
-                src="./images/zdjecie1.jpg"
-                alt="pisze kod źródłowy"
-                width="370"
-                height="294"
-              />
+              <div class="activity-box">
+                <img
+                  src="./images/zdjecie1.jpg"
+                  alt="pisze kod źródłowy"
+                  width="370"
+                  height="294"
+                />
+                <p class="activity-caption">Aplikacje komputerowe</p>
+              </div>
             </li>
             <li>
-              <img
-                src="./images/zdjecie2.jpg"
-                alt="tworzy aplikacje na smartfon"
-                width="370"
-                height="294"
-              />
+              <div class="activity-box">
+                <img
+                  src="./images/zdjecie2.jpg"
+                  alt="tworzy aplikacje na smartfon"
+                  width="370"
+                  height="294"
+                />
+                <p class="activity-caption">Aplikacje mobilne</p>
+              </div>
             </li>
             <li>
-              <img
-                src="./images/zdjecie3.jpg"
-                alt="wybiera kolor z palety"
-                width="370"
-                height="294"
-              />
+              <div class="activity-box">
+                <img
+                  src="./images/zdjecie3.jpg"
+                  alt="wybiera kolor z palety"
+                  width="370"
+                  height="294"
+                />
+                <p class="activity-caption">Rozwiązania graficzne</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -436,5 +454,7 @@
         </section>
       </div>
     </footer>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
